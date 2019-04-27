@@ -13,9 +13,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - PickUp
+  - Player
+  - Walls
   - 
   - 
   - 
@@ -40,4 +40,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 55090867
+    locked: 0
+  - name: Player
+    uniqueID: 596063521
+    locked: 0
+  - name: Interative
+    uniqueID: 2592509715
     locked: 0
