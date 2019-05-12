@@ -14,6 +14,8 @@ public class TurrentManagerScript : MonoBehaviour {
 	public float CameraShakeStrength;
 	public GameObject bulletCandidate;
 	public float DF_BULLET_OFFESET = 0.6f;
+	public ScoreManager m_kScoreManager;
+	public GameLoopManager m_kGameLoopManager;
 	// Use this for initialization
 	void Start () {
 		m_kAnimator = this.GetComponent <Animator> ();
@@ -24,11 +26,15 @@ public class TurrentManagerScript : MonoBehaviour {
 		m_kAnimator.SetTrigger ("Shoot");
 		MainCamera.transform.DOShakePosition (CameraShakeDuration, CameraShakeStrength);
 
+		m_kScoreManager.AddScore(1);
+
 		GameObject bulletObj = GameObject.Instantiate (bulletCandidate);
 		BulletScript bulletScript = bulletObj.GetComponent <BulletScript> ();
 		bulletScript.transform.position = this.transform.position + DF_BULLET_OFFESET * this.transform.right;
 		bulletScript.transform.rotation = this.transform.rotation;
 		bulletScript.InitAndShoot (new Vector2 (this.transform.right.x, this.transform.right.y));
+
+		m_kGameLoopManager.bullets.Add(bulletScript);
 	}
 
 	public void PlayRotateAnimation ()

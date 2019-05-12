@@ -32,4 +32,10 @@ public class FellowTheBeat : MonoBehaviour {
 			m_fShootCounter -= DF_BEAT_PERIOD;
 		}
 	}
+
+	public void Reset ()
+	{
+		m_fRotateCounter = DF_ROTATE_COUNTER_OFFESET;
+		m_fShootCounter = DF_SHOOT_COUNTER_OFFESET + m_fShootCounter - DF_SHOOT_PASS_OFFEST;
+	}
 }

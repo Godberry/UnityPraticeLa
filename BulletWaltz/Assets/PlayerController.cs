@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 	public float DecreaseingSpeed;
 	public ParticleSystem PlayerKillEffect;
 	public AudioSource DieAudio;
+	public UnityEvent PlayerKillEvent;
 
 	// Use this for initialization
 	void Start () {
@@ -67,5 +69,18 @@ public class PlayerController : MonoBehaviour {
 		PlayerKillEffect.transform.position = this.transform.position;
 		PlayerKillEffect.gameObject.SetActive (true);	
 		DieAudio.Play ();
+
+		if (PlayerKillEvent != null)
+		{
+			PlayerKillEvent.Invoke();
+		}
+	}
+
+	public void Reset ()
+	{
+		this.transform.position = new Vector3 (2.0f, 0, 0);
+		this.gameObject.SetActive(true);
+		PlayerKillEffect.Stop();
+		PlayerKillEffect.gameObject.SetActive(false); 
 	}
 }
