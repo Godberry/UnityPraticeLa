@@ -715,15 +715,15 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -2142781013
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 1.7
+    widthMultiplier: 0.15
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -956,7 +956,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2090843454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.315, y: -5.18, z: 0}
+  m_LocalPosition: {x: -14.99, y: -5.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -989,9 +989,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2090843454}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81998848c94426d4facb29c0f90f9a7f, type: 3}
+  m_Script: {fileID: 11500000, guid: e7a5855b89b6142439544f64e55a6ab1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxStretch: 3
+  catapultLineFront: {fileID: 1324333681}
+  catapultLineBack: {fileID: 2116847713}
 --- !u!1 &2116847709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,15 +1124,15 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -2142781013
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 1.5
+    widthMultiplier: 0.15
     widthCurve:
       serializedVersion: 2
       m_Curve:
